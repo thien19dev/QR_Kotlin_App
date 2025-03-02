@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+
 }
 
 android {
@@ -50,7 +51,11 @@ android {
 }
 
 dependencies {
-
+    implementation("androidx.navigation:navigation-compose:2.7.6")
+    implementation(platform("com.google.firebase:firebase-bom:32.7.1")) // BOM version tự động cập nhật
+    implementation("com.google.firebase:firebase-auth-ktx") // Firebase Auth
+    implementation("com.google.firebase:firebase-firestore-ktx") // Firestore Database
+    implementation("com.google.firebase:firebase-storage-ktx") // Firebase Storage
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)

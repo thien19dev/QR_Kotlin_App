@@ -32,6 +32,7 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import fpt.thienhdph47232.qrapp.ui.theme.QRAppTheme
 
 class MainActivity : ComponentActivity() {
@@ -39,69 +40,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            LoginScreen()
-        }
-    }
-}
-
-@Composable
-fun LoginScreen() {
-    var email by remember { mutableStateOf("") }
-    var password by remember { mutableStateOf("") }
-
-    Column(
-        modifier = Modifier.fillMaxSize(),
-        verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        // Logo
-        Image(
-            painter = painterResource(id = R.drawable.ic_launcher_foreground),
-            contentDescription = "Logo",
-            modifier = Modifier.size(100.dp)
-        )
-
-        // Tên công ty
-        Text(
-            text = "My Company",
-            fontSize = 24.sp,
-            color = Color.Black,
-            modifier = Modifier.padding(16.dp)
-        )
-
-        // Email field
-        OutlinedTextField(
-            value = email,
-            onValueChange = { email = it },
-            label = { Text("Email") },
-            modifier = Modifier.fillMaxWidth(0.8f)
-        )
-
-        // Password field
-        OutlinedTextField(
-            value = password,
-            onValueChange = { password = it },
-            label = { Text("Mật khẩu") },
-            visualTransformation = PasswordVisualTransformation(),
-            modifier = Modifier.fillMaxWidth(0.8f)
-        )
-
-        Spacer(modifier = Modifier.height(16.dp))
-
-        // Login Button
-        Button(
-            onClick = { /* Handle login */ },
-            modifier = Modifier.fillMaxWidth(0.8f),
-            shape = RoundedCornerShape(8.dp)
-        ) {
-            Text("Đăng nhập")
-        }
-
-        Spacer(modifier = Modifier.height(8.dp))
-
-        // Register Text Button
-        TextButton(onClick = { /* Navigate to Register Screen */ }) {
-            Text("Chưa có tài khoản? Đăng ký ngay")
+            AppNavGraph()
         }
     }
 }
