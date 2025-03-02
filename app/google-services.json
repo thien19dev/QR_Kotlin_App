@@ -8,25 +8,6 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:383906926517:android:d47b8b59043ca427da53fc",
-        "android_client_info": {
-          "package_name": "fpoly.thienhdph47232.storeusingfirebaserealtimedatabase"
-        }
-      },
-      "oauth_client": [],
-      "api_key": [
-        {
-          "current_key": "AIzaSyB7IQqkDv1A34Fbj9f99keyZUI7JKxRqVM"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": []
-        }
-      }
-    },
-    {
-      "client_info": {
         "mobilesdk_app_id": "1:383906926517:android:072937d9e61085d2da53fc",
         "android_client_info": {
           "package_name": "fpt.thienhdph47232.qrapp"
